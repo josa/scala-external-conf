@@ -11,4 +11,6 @@ class ScalaExternalConf(info: ProjectInfo) extends DefaultProject(info) {
   val slf4j = "org.slf4j" % "slf4j-api" % "1.6.1"
   val l4jbind = "org.slf4j" % "slf4j-log4j12" % "1.6.1" % "runtime"
 
+
+
 }
