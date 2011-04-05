@@ -1,0 +1,4 @@
+#External Dependencies
+#Mon Apr 04 23:02:06 BRT 2011
+/home/josa/Working/projects/scala-external-conf/project/boot/scala-2.7.7/lib/scala-library.jar=ScalaExternalConf.scala
+/home/josa/Working/projects/scala-external-conf/project/boot/scala-2.7.7/org.scala-tools.sbt/sbt/0.7.4/sbt_2.7.7-0.7.4.jar=ScalaExternalConf.scala
