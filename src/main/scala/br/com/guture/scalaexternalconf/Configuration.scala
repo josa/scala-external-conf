@@ -1,6 +1,6 @@
 package main.scala.br.com.guture.scalaexternalconf
 
-import java.io.{InputStream, File, FileInputStream}
+import java.io.{File, FileInputStream, IOException}
 import org.slf4j.LoggerFactory
 
 object Configuration extends Configuration
@@ -13,19 +13,41 @@ trait Configuration {
 
   protected def loadProperties: java.util.Properties = {
     val props = new java.util.Properties
-    var stream: InputStream = null
     System.getProperty("external.conf.path") match {
       case configFile: String =>
-        stream = new FileInputStream(new File(configFile))
+
+        val pathFile = new File(configFile)
+
+        if (!pathFile.isDirectory)
+          throw new RuntimeException("Error: o path %s is not a directory".format(pathFile.getAbsolutePath));
+
+        for (file <- pathFile.listFiles) {
+          var stream = new FileInputStream(file)
+          loadStreamAndDispose(props load stream, stream.close)
+        }
+
         if (logger.isDebugEnabled)
           logger.debug("carregado configuracoes de: %s" format (configFile))
+
       case _ =>
         logger.error("erro ao carregar as configurações do sistema")
     }
-    if (stream ne null)
-      quietlyDispose(props load stream, stream.close)
     props
   }
 
+  protected def loadStreamAndDispose(action: => Unit, disposal: => Unit) = {
+    try {
+      action
+    }
+    finally {
+      try {
+        disposal
+      }
+      catch {
+        case e: IOException =>
+          logger.error("erro loading properties", e)
+      }
+    }
+  }
 
 }

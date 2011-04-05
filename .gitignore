@@ -1,3 +1,5 @@
-target/scala_2.8.1/classes/
-target/scala_2.8.1/analysis
+target/scala_2.8.1/classes/**
+target/scala_2.8.1/analysis/**
+project/build/target/scala_2.7.7/**
+target/scala_2.8.1/test-classes/**
 *.class
