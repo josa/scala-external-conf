@@ -1,4 +1,4 @@
-package main.scala.br.com.guture.scalaexternalconf
+package br.com.guture.scalaexternalconf
 
 import java.io.{File, FileInputStream, IOException}
 import org.slf4j.LoggerFactory
