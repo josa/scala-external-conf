@@ -9,7 +9,9 @@ trait Configuration {
 
   private lazy val logger = LoggerFactory.getLogger(getClass)
 
-  lazy val properties: java.util.Properties = loadProperties
+  private lazy val properties: java.util.Properties = loadProperties
+
+  def get(key: String): String = properties.getProperty(key)
 
   protected def loadProperties: java.util.Properties = {
     val props = new java.util.Properties
