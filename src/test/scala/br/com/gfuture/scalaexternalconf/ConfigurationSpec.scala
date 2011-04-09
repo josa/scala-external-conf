@@ -1,6 +1,5 @@
 package br.com.gfuture.scalaexternalconf
 
-import _root_.br.com.guture.scalaexternalconf.Configuration
 import org.scalatest.matchers.ShouldMatchers
 import org.scalatest.{Spec, BeforeAndAfterEach}
 
