@@ -6,3 +6,8 @@ test
 release
 compile
 release
+update
+test
+release
+clean
+release

@@ -1,6 +1,6 @@
 package br.com.gfuture.scalaexternalconf
 
-import java.io.{File, FileInputStream, IOException}
+import java.io.{ File, FileInputStream, IOException }
 import org.slf4j.LoggerFactory
 
 object Configuration extends Configuration
@@ -24,8 +24,10 @@ trait Configuration {
           throw new RuntimeException("Error: o path %s is not a directory".format(pathFile.getAbsolutePath));
 
         for (file <- pathFile.listFiles) {
-          var stream = new FileInputStream(file)
-          loadStreamAndDispose(props load stream, stream.close)
+          if (!file.isDirectory) {
+            var stream = new FileInputStream(file)
+            loadStreamAndDispose(props load stream, stream.close)
+          }
         }
 
         if (logger.isDebugEnabled)
@@ -40,12 +42,10 @@ trait Configuration {
   protected def loadStreamAndDispose(action: => Unit, disposal: => Unit) = {
     try {
       action
-    }
-    finally {
+    } finally {
       try {
         disposal
-      }
-      catch {
+      } catch {
         case e: IOException =>
           logger.error("erro loading properties", e)
       }
