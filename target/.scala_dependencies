@@ -1,0 +1,10 @@
+/home/josa/working/projects/scala-external-conf/target/test-classes:/home/josa/working/projects/scala-external-conf/target/classes:/home/josa/.m2/repository/org/scala-lang/scala-library/2.8.0/scala-library-2.8.0.jar:/home/josa/.m2/repository/junit/junit/4.8.2/junit-4.8.2.jar:/home/josa/.m2/repository/org/scala-tools/testing/specs_2.8.0/1.6.5/specs_2.8.0-1.6.5.jar:/home/josa/.m2/repository/org/scalatest/scalatest/1.3/scalatest-1.3.jar:/home/josa/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar:/home/josa/.m2/repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar:/home/josa/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar
+-------
+../src/test/scala/br/com/gfuture/scalaexternalconf/ConfigurationSpec.scala -> ../src/test/scala/br/com/gfuture/scalaexternalconf/ConfigurationSpec.scala
+-------
+../src/test/scala/br/com/gfuture/scalaexternalconf/ConfigurationSpec.scala -> test-classes/br/com/gfuture/scalaexternalconf/ConfigurationSpec$$anonfun$1$$anonfun$apply$mcV$sp$3.class
+../src/test/scala/br/com/gfuture/scalaexternalconf/ConfigurationSpec.scala -> test-classes/br/com/gfuture/scalaexternalconf/ConfigurationSpec$$anonfun$1$$anonfun$apply$mcV$sp$1.class
+../src/test/scala/br/com/gfuture/scalaexternalconf/ConfigurationSpec.scala -> test-classes/br/com/gfuture/scalaexternalconf/ConfigurationSpec$$anonfun$1$$anonfun$apply$mcV$sp$3$$anonfun$apply$mcV$sp$4.class
+../src/test/scala/br/com/gfuture/scalaexternalconf/ConfigurationSpec.scala -> test-classes/br/com/gfuture/scalaexternalconf/ConfigurationSpec$$anonfun$1$$anonfun$apply$mcV$sp$2.class
+../src/test/scala/br/com/gfuture/scalaexternalconf/ConfigurationSpec.scala -> test-classes/br/com/gfuture/scalaexternalconf/ConfigurationSpec.class
+../src/test/scala/br/com/gfuture/scalaexternalconf/ConfigurationSpec.scala -> test-classes/br/com/gfuture/scalaexternalconf/ConfigurationSpec$$anonfun$1.class

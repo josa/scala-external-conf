@@ -17,7 +17,6 @@ trait Configuration {
     val props = new java.util.Properties
     System.getProperty("external.conf.path") match {
       case configFile: String =>
-
         val pathFile = new File(configFile)
 
         if (!pathFile.isDirectory)
@@ -32,9 +31,8 @@ trait Configuration {
 
         if (logger.isDebugEnabled)
           logger.debug("carregado configuracoes de: %s" format (configFile))
-
       case _ =>
-        logger.error("erro ao carregar as configurações do sistema")
+        throw new RuntimeException("erro ao carregar as configurações do sistema, configure -Dexternal.conf.path=path/to/conf")
     }
     props
   }
